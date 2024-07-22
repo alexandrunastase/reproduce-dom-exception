@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+  <turbo-frame id="modal">
+    <h1>Modal</h1>
+    {{ component('ModalForm', { initialFormData: formData }) }}
+  </turbo-frame>
+{% endblock %}

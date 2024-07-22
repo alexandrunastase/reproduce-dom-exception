@@ -1,0 +1,49 @@
+<div {{ attributes }} class="space-y-6 sm:px-6 lg:col-span-9 lg:px-0">
+
+  {{ form_start(form, {
+    attr: {
+      'data-action': 'live#action:prevent',
+      'data-live-action-param':'save'
+    },
+  }) }}
+
+  {{ form_label(form.name,null, {
+    'label': 'Name',
+    'label_attr': {'class': ''}
+  }) }}
+  {{ form_widget(form.name, {
+    'required': 'required',
+    'attr': {
+      'placeholder': ' ',
+      'autofocus':'autofocus',
+      'autocomplete': 'off',
+      'class': ''
+    }
+  }) }}
+  <br/>
+  {{ form_label(form.date,null, {
+    'label': 'Date',
+    'label_attr': {
+      'class': 'text-gray-500
+      peer-focus:scale-90
+      '}
+  }) }}
+  {{ form_widget(form.date, {
+    'attr': {
+      'placeholder': '',
+      'autocomplete': 'off',
+      'data-test-id': 'date-input',
+      'class': 'peer
+    focus:border-slate-500
+    '
+    }
+  }) }}
+
+  <div class="my-2 ml-1 text-red-500">
+    {{ form_errors(form.date) }}
+  </div>
+
+  {{ form_end(form) }}
+</div>
+
+
